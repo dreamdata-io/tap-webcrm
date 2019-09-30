@@ -1202,7 +1202,9 @@
                 ],
                 "summary": "Returns accsess token",
                 "operationId": "AuthPost",
-                "consumes": [],
+                "consumes": [
+                    "multipart/form-data"
+                ],
                 "produces": [
                     "text/plain",
                     "application/json",
@@ -1247,7 +1249,9 @@
                 ],
                 "summary": "Returns accsess token",
                 "operationId": "AuthApiLoginPost",
-                "consumes": [],
+                "consumes": [
+                    "multipart/form-data"
+                ],
                 "produces": [
                     "text/plain",
                     "application/json",
@@ -1280,7 +1284,9 @@
                 ],
                 "summary": "Returns accsess token",
                 "operationId": "AuthCrmLoginPost",
-                "consumes": [],
+                "consumes": [
+                    "multipart/form-data"
+                ],
                 "produces": [
                     "text/plain",
                     "application/json",
@@ -3168,65 +3174,6 @@
                 }
             }
         },
-        "/EmailSupports/BySupportCase/{supportCaseId}": {
-            "get": {
-                "tags": [
-                    "EmailSupports"
-                ],
-                "summary": "Returns all EmailSupports for a specified support case",
-                "operationId": "EmailSupportsBySupportCaseBySupportCaseIdGet",
-                "consumes": [],
-                "produces": [
-                    "text/plain",
-                    "application/json",
-                    "text/json",
-                    "application/xml",
-                    "text/xml"
-                ],
-                "parameters": [
-                    {
-                        "name": "supportCaseId",
-                        "in": "path",
-                        "required": true,
-                        "type": "integer",
-                        "format": "int32"
-                    },
-                    {
-                        "name": "Page",
-                        "in": "query",
-                        "required": false,
-                        "type": "integer",
-                        "format": "int32",
-                        "maximum": 1000000,
-                        "minimum": 1
-                    },
-                    {
-                        "name": "Size",
-                        "in": "query",
-                        "required": false,
-                        "type": "integer",
-                        "format": "int32",
-                        "maximum": 1000,
-                        "minimum": 1
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Success",
-                        "schema": {
-                            "uniqueItems": false,
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/definitions/SupportCaseEmailDto"
-                            }
-                        }
-                    },
-                    "401": {
-                        "description": "Unauthorized"
-                    }
-                }
-            }
-        },
         "/Events/{id}": {
             "get": {
                 "tags": [
@@ -4278,7 +4225,6 @@
                             "Product",
                             "SupportCase",
                             "User",
-                            "SyncedMeeting",
                             "All"
                         ]
                     }
@@ -4405,88 +4351,6 @@
                 "responses": {
                     "200": {
                         "description": "Success"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
-                    }
-                }
-            }
-        },
-        "/Meetings/ByOrganisation/{organisationId}": {
-            "get": {
-                "tags": [
-                    "Meetings"
-                ],
-                "summary": "Get the list of meetings for an organisation.",
-                "description": "Date range should be less than 1 year.",
-                "operationId": "MeetingsByOrganisationByOrganisationIdGet",
-                "consumes": [],
-                "produces": [
-                    "text/plain",
-                    "application/json",
-                    "text/json",
-                    "application/xml",
-                    "text/xml"
-                ],
-                "parameters": [
-                    {
-                        "name": "organisationId",
-                        "in": "path",
-                        "required": true,
-                        "type": "integer",
-                        "format": "int32"
-                    },
-                    {
-                        "name": "From",
-                        "in": "query",
-                        "required": true,
-                        "type": "string",
-                        "format": "date-time"
-                    },
-                    {
-                        "name": "To",
-                        "in": "query",
-                        "required": true,
-                        "type": "string",
-                        "format": "date-time"
-                    },
-                    {
-                        "name": "UserId",
-                        "in": "query",
-                        "required": true,
-                        "type": "string"
-                    },
-                    {
-                        "name": "IncludeRecurring",
-                        "in": "query",
-                        "required": false,
-                        "type": "boolean"
-                    },
-                    {
-                        "name": "Page",
-                        "in": "query",
-                        "required": false,
-                        "type": "integer",
-                        "format": "int32",
-                        "maximum": 1000000,
-                        "minimum": 1
-                    },
-                    {
-                        "name": "Size",
-                        "in": "query",
-                        "required": false,
-                        "type": "integer",
-                        "format": "int32",
-                        "maximum": 1000,
-                        "minimum": 1
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Success",
-                        "schema": {
-                            "$ref": "#/definitions/MeetingListDto"
-                        }
                     },
                     "401": {
                         "description": "Unauthorized"
@@ -9172,72 +9036,6 @@
                 }
             }
         },
-        "/Queries": {
-            "get": {
-                "tags": [
-                    "Queries"
-                ],
-                "summary": "Returns query's result",
-                "description": "Please be careful when using custom and plus fields for filtering data. \r\n\t\t\tSome operations are not suitable for some types of custom and plus fields. It may lead to incorrect results.",
-                "operationId": "QueriesGet",
-                "consumes": [],
-                "produces": [
-                    "text/plain",
-                    "application/json",
-                    "text/json",
-                    "application/xml",
-                    "text/xml"
-                ],
-                "parameters": [
-                    {
-                        "name": "script",
-                        "in": "query",
-                        "required": false,
-                        "type": "string"
-                    },
-                    {
-                        "name": "Page",
-                        "in": "query",
-                        "required": false,
-                        "type": "integer",
-                        "format": "int32",
-                        "maximum": 1000000,
-                        "minimum": 1
-                    },
-                    {
-                        "name": "Size",
-                        "in": "query",
-                        "required": false,
-                        "type": "integer",
-                        "format": "int32",
-                        "maximum": 1000,
-                        "minimum": 1
-                    },
-                    {
-                        "name": "formatCustomFields",
-                        "in": "query",
-                        "description": "Enable formatting of custom fields to match regular endpoints",
-                        "required": false,
-                        "type": "boolean"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Success",
-                        "schema": {
-                            "uniqueItems": false,
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/definitions/ObjectDto"
-                            }
-                        }
-                    },
-                    "401": {
-                        "description": "Unauthorized"
-                    }
-                }
-            }
-        },
         "/QuotationLines/{id}": {
             "get": {
                 "tags": [
@@ -10424,39 +10222,6 @@
                             "type": "array",
                             "items": {
                                 "$ref": "#/definitions/RevenueDto"
-                            }
-                        }
-                    },
-                    "401": {
-                        "description": "Unauthorized"
-                    }
-                }
-            }
-        },
-        "/Settings/Features": {
-            "get": {
-                "tags": [
-                    "Settings"
-                ],
-                "summary": "Returns information about features",
-                "operationId": "SettingsFeaturesGet",
-                "consumes": [],
-                "produces": [
-                    "text/plain",
-                    "application/json",
-                    "text/json",
-                    "application/xml",
-                    "text/xml"
-                ],
-                "parameters": [],
-                "responses": {
-                    "200": {
-                        "description": "Success",
-                        "schema": {
-                            "uniqueItems": false,
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/definitions/FeaturesDto"
                             }
                         }
                     },
@@ -14368,6 +14133,7 @@
         "MeetingInfoCreateDto": {
             "required": [
                 "MeetingUserId",
+                "MeetingDescription",
                 "MeetingSubject",
                 "MeetingStart",
                 "MeetingEnd"
@@ -17988,18 +17754,6 @@
                 }
             }
         },
-        "FeaturesDto": {
-            "type": "object",
-            "properties": {
-                "CalendarIntegration": {
-                    "enum": [
-                        "Disabled",
-                        "Enabled"
-                    ],
-                    "type": "string"
-                }
-            }
-        },
         "SupportCaseHookDto": {
             "required": [
                 "Filter",
@@ -18196,7 +17950,6 @@
                 },
                 "UserCalendarColorScheme": {
                     "enum": [
-                        "Dashboard",
                         "Scheme0",
                         "Scheme1",
                         "Scheme2",
@@ -18206,7 +17959,8 @@
                         "Scheme6",
                         "Scheme7",
                         "Scheme8",
-                        "Scheme9"
+                        "Scheme9",
+                        "Dashboard"
                     ],
                     "type": "string"
                 },
