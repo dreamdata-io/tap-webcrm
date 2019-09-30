@@ -14,6 +14,8 @@ setup(
         [console_scripts]
         tap-webcrm=tap_webcrm:main
     """,
+    include_package_data=True,
+    package_data={"tap_webcrm": ["swagger/swagger.json"]},
     packages=["tap_webcrm"],
     setup_requires=["pytest-runner"],
     extras_require={"test": [["pytest"]]},
