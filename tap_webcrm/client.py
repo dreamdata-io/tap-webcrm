@@ -36,7 +36,7 @@ class WebCRM:
         yield from self.__paginate("/Organisations")
 
     def __paginate(self, path, page_size=100, **kwargs):
-        page, size = 1, page_size or 100
+        page, size = 1, page_size or 500
         while True:
             items = self.request("GET", path, params={"Page": page, "Size": size})
 
@@ -80,4 +80,3 @@ class WebCRM:
             return resp.json()
 
         resp.raise_for_status()
-
