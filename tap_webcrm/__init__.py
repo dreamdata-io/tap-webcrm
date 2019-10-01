@@ -1,12 +1,17 @@
 import os
+import sys
+import json
 
 import singer
 from singer import utils
 
 from tap_webcrm.client import WebCRM
+from tap_webcrm.stream import discover
 
 
 logger = singer.get_logger()
+
+implemented_streams = {"opportunity, organisation", "person"}
 
 
 def main():
@@ -20,7 +25,12 @@ def main():
 
     webcrm_client = WebCRM(API_TOKEN)
 
-    webcrm_client = WebCRM(API_TOKEN)
+    stream_names = args.config.get("streams", list(implemented_streams))
+
+    if args.discover:
+        streams = discover(stream_names)
+        print(json.dumps(streams, sort_keys=True, indent="  "))
+        return
 
     for person in webcrm_client.list_persons():
         print(person)
