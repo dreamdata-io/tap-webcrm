@@ -9,7 +9,7 @@ setup(
     author="Dreamdata",
     url="https://dreamdata.io",
     classifiers=["Programming Language :: Python :: 3 :: Only"],
-    install_requires=["singer-python==5.8.0", "requests", "cachetools==3.1.1"],
+    install_requires=["singer-python==5.8.1", "requests", "cachetools==3.1.1"],
     entry_points="""
         [console_scripts]
         tap-webcrm=tap_webcrm:main
