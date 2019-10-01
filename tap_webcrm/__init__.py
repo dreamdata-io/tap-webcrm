@@ -1,13 +1,27 @@
 import os
 
+import singer
+from singer import utils
+
 from tap_webcrm.client import WebCRM
 
-API_TOKEN = os.environ["WEBCRM_API_TOKEN"]
 
-webcrm_client = WebCRM(API_TOKEN)
+logger = singer.get_logger()
 
 
 def main():
+    args = utils.parse_args(["config"])
+
+    API_TOKEN = args.config.get("api_token") or os.environ.get("WEBCRM_API_TOKEN")
+    if not API_TOKEN:
+        raise ValueError(
+            "required 'api_token' or envrionment 'WEBCRM_API_TOKEN' not found"
+        )
+
+    webcrm_client = WebCRM(API_TOKEN)
+
+    webcrm_client = WebCRM(API_TOKEN)
+
     for person in webcrm_client.list_persons():
         print(person)
         break
