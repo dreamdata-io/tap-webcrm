@@ -26,6 +26,9 @@ def main():
     webcrm_client = WebCRM(API_TOKEN)
 
     stream_names = args.config.get("streams", list(implemented_streams))
+    for stream_name in stream_names:
+        if stream_name not in implemented_streams:
+            raise ValueError(f"config.streams contains unknown stream: {stream_name}")
 
     if args.discover:
         streams = discover(stream_names)
