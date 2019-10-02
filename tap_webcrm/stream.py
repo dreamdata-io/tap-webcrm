@@ -21,13 +21,13 @@ def process_streams(client, streams, state):
         },
         "organisation": {
             "bookmark_property": "OrganisationUpdatedAt",
-            "generator": client.query_organisations,
+            "generator": client.query_organisation,
             "key_properties": ["OrganisationId"],
             "exclude_fields": ["o_lastUpdatedById", "RowNumber"],
         },
         "person": {
             "bookmark_property": "PersonUpdatedAt",
-            "generator": client.query_persons,
+            "generator": client.query_person,
             "key_properties": ["PersonId"],
             "exclude_fields": [
                 "p_lastUpdatedById",

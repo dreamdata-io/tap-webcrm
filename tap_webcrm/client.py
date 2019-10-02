@@ -35,7 +35,7 @@ class WebCRM:
     def list_organisations(self):
         yield from self.__paginate("/Organisations")
 
-    def query_organisations(self, checkpoint=None):
+    def query_organisation(self, checkpoint=None):
         yield from self.__query(
             "organisation", "OrganisationUpdatedAt", checkpoint=checkpoint
         )
@@ -45,7 +45,7 @@ class WebCRM:
             "opportunity", "OpportunityUpdatedAt", checkpoint=checkpoint
         )
 
-    def query_persons(self, checkpoint=None):
+    def query_person(self, checkpoint=None):
         yield from self.__query("person", "PersonUpdatedAt", checkpoint=checkpoint)
 
     def __query(self, table, updated_at_field, direction="ASC", checkpoint=None):
