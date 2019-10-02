@@ -344,121 +344,141 @@
         "PersonPlus1": {
             "type": [
                 "null",
-                "string"
+                "string",
+                "number"
             ]
         },
         "PersonPlus2": {
             "type": [
                 "null",
-                "string"
+                "string",
+                "number"
             ]
         },
         "PersonPlus3": {
             "type": [
                 "null",
-                "string"
+                "string",
+                "number"
             ]
         },
         "PersonPlus4": {
             "type": [
                 "null",
-                "string"
+                "string",
+                "number"
             ]
         },
         "PersonPlus5": {
             "type": [
                 "null",
-                "string"
+                "string",
+                "number"
             ]
         },
         "PersonPlus6": {
             "type": [
                 "null",
-                "string"
+                "string",
+                "number"
             ]
         },
         "PersonPlus7": {
             "type": [
                 "null",
-                "string"
+                "string",
+                "number"
             ]
         },
         "PersonPlus8": {
             "type": [
                 "null",
-                "string"
+                "string",
+                "number"
             ]
         },
         "PersonPlus9": {
             "type": [
                 "null",
-                "string"
+                "string",
+                "number"
             ]
         },
         "PersonPlus10": {
             "type": [
                 "null",
-                "string"
+                "string",
+                "number"
             ]
         },
         "PersonPlus11": {
             "type": [
                 "null",
-                "string"
+                "string",
+                "number"
             ]
         },
         "PersonPlus12": {
             "type": [
                 "null",
-                "string"
+                "string",
+                "number"
             ]
         },
         "PersonPlus13": {
             "type": [
                 "null",
-                "string"
+                "string",
+                "number"
             ]
         },
         "PersonPlus14": {
             "type": [
                 "null",
-                "string"
+                "string",
+                "number"
             ]
         },
         "PersonPlus15": {
             "type": [
                 "null",
-                "string"
+                "string",
+                "number"
             ]
         },
         "PersonPlus16": {
             "type": [
                 "null",
-                "string"
+                "string",
+                "number"
             ]
         },
         "PersonPlus17": {
             "type": [
                 "null",
-                "string"
+                "string",
+                "number"
             ]
         },
         "PersonPlus18": {
             "type": [
                 "null",
-                "string"
+                "string",
+                "number"
             ]
         },
         "PersonPlus19": {
             "type": [
                 "null",
-                "string"
+                "string",
+                "number"
             ]
         },
         "PersonPlus20": {
             "type": [
                 "null",
-                "string"
+                "string",
+                "number"
             ]
         },
         "PersonCustom1": {
