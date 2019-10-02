@@ -15,18 +15,28 @@ def process_streams(client, streams, state):
     implemented_streams = {
         "opportunity": {
             "bookmark_property": "OpportunityUpdatedAt",
-            "generator": client.list_opportunities,
+            "generator": client.query_opportunity,
             "key_properties": ["OpportunityId"],
+            "exclude_fields": ["op_multiTerritory", "op_lastUpdatedById", "RowNumber"],
         },
         "organisation": {
             "bookmark_property": "OrganisationUpdatedAt",
-            "generator": client.list_organisations,
+            "generator": client.query_organisations,
             "key_properties": ["OrganisationId"],
+            "exclude_fields": ["o_lastUpdatedById", "RowNumber"],
         },
         "person": {
             "bookmark_property": "PersonUpdatedAt",
-            "generator": client.list_persons,
+            "generator": client.query_persons,
             "key_properties": ["PersonId"],
+            "exclude_fields": [
+                "p_lastUpdatedById",
+                "p_reportFilterMatch",
+                "p_marketDataProviderId",
+                "p_lastLogin",
+                "p_memDate",
+                "RowNumber",
+            ],
         },
     }
 
