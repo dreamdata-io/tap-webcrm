@@ -54,7 +54,7 @@ class WebCRM:
         script = f"SELECT * FROM {table} order by {updated_at_field} {direction}"
         # script = f"SELECT * FROM {table} t where t.PersonUpdatedAt > '2019-09-01T12:48:51' order by PersonUpdatedAt ASC"
 
-        yield from self.__paginate("/Queries", params={"script": script})
+        return self.__paginate("/Queries", params={"script": script})
 
     def __paginate(self, path, page_size=None, **kwargs):
         params = kwargs.pop("params", {})
