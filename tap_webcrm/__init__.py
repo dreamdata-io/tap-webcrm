@@ -23,15 +23,15 @@ def main():
 
     webcrm_client = WebCRM(API_TOKEN)
 
-    stream_names = args.config.get("streams")
+    streams = args.config.get("streams")
     state = args.state
 
     if args.discover:
-        streams = discover(stream_names)
+        streams = discover(streams.keys())
         print(json.dumps(streams, sort_keys=True, indent="  "))
         return
 
-    process_streams(webcrm_client, stream_names, state)
+    process_streams(webcrm_client, streams, state)
 
 
 if __name__ == "__main__":

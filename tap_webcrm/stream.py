@@ -41,19 +41,24 @@ def process_streams(client, streams, state):
     }
 
     if not streams:
-        streams = implemented_streams.keys()
+        streams = implemented_streams
+    else:
+        for stream_name in streams:
+            if stream_name not in implemented_streams:
+                raise ValueError(
+                    f"'streams.{stream_name}' is not in list of valid streams: {implemented_streams.keys()}"
+                )
 
-    for stream_name in streams:
-        if stream_name.lower() not in implemented_streams:
-            raise ValueError(f"streams contains unknown stream: {stream_name}")
+    for stream_name, stream_custom in streams.items():
+        stream_config = implemented_streams[stream_name]
 
-        config = implemented_streams[stream_name]
-
-        bookmark_property = config["bookmark_property"]
-        generator = config["generator"]
-        key_properties = config["key_properties"]
-        exclude_fields = config.get("exclude_fields")
-        sample_size = config.get("sample_size")
+        bookmark_property = stream_config["bookmark_property"]
+        generator = stream_config["generator"]
+        key_properties = stream_config["key_properties"]
+        exclude_fields = stream_config.get("exclude_fields") + stream_custom.get(
+            "exclude_fields", []
+        )
+        sample_size = stream_custom.get("sample_size")
 
         logger.info(f"[{stream_name}] streaming..")
 
