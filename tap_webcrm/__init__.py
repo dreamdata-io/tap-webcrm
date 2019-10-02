@@ -35,4 +35,16 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    API_TOKEN = os.environ["WEBCRM_API_TOKEN"]
+    from client import WebCRM
+
+    webcrm_client = WebCRM(API_TOKEN)
+    for person in webcrm_client.query_organisation():
+        print(person)
+        break
+    for item in webcrm_client.query_opportunity():
+        print(item)
+        break
+    for item in webcrm_client.query_person():
+        print(item)
+        break
