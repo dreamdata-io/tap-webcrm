@@ -6,161 +6,296 @@
     "properties": {
         "PersonBirthday": {
             "format": "date-time",
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonBlockMassEmail": {
-            "type": "boolean"
+            "type": [
+                "null",
+                "boolean"
+            ]
         },
         "PersonBlockMassEmail2": {
-            "type": "boolean"
+            "type": [
+                "null",
+                "boolean"
+            ]
         },
         "PersonCampaignPassword": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonCampaignWrongPasswordCount": {
             "format": "int32",
-            "type": "integer"
+            "type": [
+                "null",
+                "integer"
+            ]
         },
         "PersonCheckMark1": {
-            "type": "boolean"
+            "type": [
+                "null",
+                "boolean"
+            ]
         },
         "PersonCheckMark2": {
-            "type": "boolean"
+            "type": [
+                "null",
+                "boolean"
+            ]
         },
         "PersonCheckMark3": {
-            "type": "boolean"
+            "type": [
+                "null",
+                "boolean"
+            ]
         },
         "PersonCheckMark4": {
-            "type": "boolean"
+            "type": [
+                "null",
+                "boolean"
+            ]
         },
         "PersonCheckMark5": {
-            "type": "boolean"
+            "type": [
+                "null",
+                "boolean"
+            ]
         },
         "PersonCheckMark6": {
-            "type": "boolean"
+            "type": [
+                "null",
+                "boolean"
+            ]
         },
         "PersonCheckMark7": {
-            "type": "boolean"
+            "type": [
+                "null",
+                "boolean"
+            ]
         },
         "PersonCheckMark8": {
-            "type": "boolean"
+            "type": [
+                "null",
+                "boolean"
+            ]
         },
         "PersonCheckMark9": {
-            "type": "boolean"
+            "type": [
+                "null",
+                "boolean"
+            ]
         },
         "PersonCheckMark10": {
-            "type": "boolean"
+            "type": [
+                "null",
+                "boolean"
+            ]
         },
         "PersonComment": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonCreatedAt": {
             "format": "date-time",
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonCreatedBy": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonDirectPhone": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonEmail": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonEmail2": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonEmailBounces": {
-            "type": "boolean"
+            "type": [
+                "null",
+                "boolean"
+            ]
         },
         "PersonEmail2Bounces": {
-            "type": "boolean"
+            "type": [
+                "null",
+                "boolean"
+            ]
         },
         "PersonFirstName": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonId": {
             "format": "int32",
             "type": "integer"
         },
         "PersonImageFileExtension": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonLastLoginDateTime": {
             "format": "date-time",
             "description": "This property is obsolete and will be removed in the future. ",
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonLastName": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonLoginLog": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonMarketDateId": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonMemberGroupId": {
             "format": "int32",
             "description": "This property is obsolete and will be removed in the future. ",
-            "type": "integer"
+            "type": [
+                "null",
+                "integer"
+            ]
         },
         "PersonMemberLanguageId": {
             "format": "int32",
             "description": "This property is obsolete and will be removed in the future. ",
-            "type": "integer"
+            "type": [
+                "null",
+                "integer"
+            ]
         },
         "PersonMemberNumber": {
             "description": "This property is obsolete and will be removed in the future. ",
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonMemberPassword": {
             "description": "This property is obsolete and will be removed in the future. ",
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonMemberStartDate": {
             "format": "date-time",
             "description": "This property is obsolete and will be removed in the future. ",
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonMemberStatusId": {
             "format": "int32",
             "description": "This property is obsolete and will be removed in the future. ",
-            "type": "integer"
+            "type": [
+                "null",
+                "integer"
+            ]
         },
         "PersonMemberWrongPasswordCount": {
             "format": "int32",
             "description": "This property is obsolete and will be removed in the future. ",
-            "type": "integer"
+            "type": [
+                "null",
+                "integer"
+            ]
         },
         "PersonMiddleName": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonMobilePhone": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonName": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonHistory": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonOrganisationId": {
             "format": "int32",
-            "type": "integer"
+            "type": [
+                "null",
+                "integer"
+            ]
         },
         "PersonPassword": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonSalutation": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonSkype": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonSortOrder": {
             "format": "int32",
-            "type": "integer"
+            "type": [
+                "null",
+                "integer"
+            ]
         },
         "PersonStatus": {
             "enum": [
@@ -169,132 +304,258 @@
                 "Other",
                 "Guest"
             ],
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonSupportLanguageId": {
             "format": "int32",
-            "type": "integer"
+            "type": [
+                "null",
+                "integer"
+            ]
         },
         "PersonTelephoneSearch": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonTitle": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonUpdatedAt": {
             "format": "date-time",
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonUpdatedBy": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonPlus1": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonPlus2": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonPlus3": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonPlus4": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonPlus5": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonPlus6": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonPlus7": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonPlus8": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonPlus9": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonPlus10": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonPlus11": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonPlus12": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonPlus13": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonPlus14": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonPlus15": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonPlus16": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonPlus17": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonPlus18": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonPlus19": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonPlus20": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonCustom1": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonCustom2": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonCustom3": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonCustom4": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonCustom5": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonCustom6": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonCustom7": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonCustom8": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonCustom9": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonCustom10": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonCustom11": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonCustom12": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonCustom13": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonCustom14": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonCustom15": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         },
         "PersonMemo": {
-            "type": "string"
+            "type": [
+                "null",
+                "string"
+            ]
         }
     }
 }
