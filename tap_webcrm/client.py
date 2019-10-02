@@ -35,10 +35,13 @@ class WebCRM:
     def list_organisations(self):
         yield from self.__paginate("/Organisations")
 
-    def __paginate(self, path, page_size=100, **kwargs):
-        page, size = 1, page_size or 500
+    def __paginate(self, path, page_size=None, **kwargs):
+        params = kwargs.pop("params", {})
+        params["Page"] = 1
+        params["Size"] = page_size or 500
+
         while True:
-            items = self.request("GET", path, params={"Page": page, "Size": size})
+            items = self.request("GET", path, params=params, **kwargs)
 
             if not items:
                 break
@@ -46,7 +49,7 @@ class WebCRM:
             for item in items:
                 yield item
 
-            page += 1
+            params["Page"] += 1
 
     # TTL for the token is 3600 - set it to 3000 to make sure we don't end up
     # in a situation where it has run out by milliseconds
