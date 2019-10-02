@@ -35,6 +35,27 @@ class WebCRM:
     def list_organisations(self):
         yield from self.__paginate("/Organisations")
 
+    def query_organisations(self, checkpoint=None):
+        yield from self.__query(
+            "organisation", "OrganisationUpdatedAt", checkpoint=checkpoint
+        )
+
+    def query_opportunity(self, checkpoint=None):
+        yield from self.__query(
+            "opportunity", "OpportunityUpdatedAt", checkpoint=checkpoint
+        )
+
+    def query_persons(self, checkpoint=None):
+        yield from self.__query("person", "PersonUpdatedAt", checkpoint=checkpoint)
+
+    def __query(self, table, updated_at_field, direction="ASC", checkpoint=None):
+        if direction not in ["ASC", "DESC"]:
+            raise ValueError("direction needs to be either 'ASC' or 'DESC'")
+        script = f"SELECT * FROM {table} t order by {updated_at_field} {direction}"
+        # script = f"SELECT * FROM {table} t where t.PersonUpdatedAt > '2019-09-01T12:48:51' order by PersonUpdatedAt ASC"
+
+        yield from self.__paginate("/Queries", params={"script": script})
+
     def __paginate(self, path, page_size=None, **kwargs):
         params = kwargs.pop("params", {})
         params["Page"] = 1
