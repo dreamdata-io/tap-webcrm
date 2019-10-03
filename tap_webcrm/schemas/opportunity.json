@@ -1,0 +1,580 @@
+{
+    "required": [
+        "OpportunityId"
+    ],
+    "type": "object",
+    "properties": {
+        "OpportunityAssignedTo": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OpportunityAssignedTo2": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OpportunityComment": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityCreatedAt": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityCreatedBy": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityCurrencyName": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityDescription": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityDiscount": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityErpId": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityErpReadOnly": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityErpStatus": {
+            "enum": [
+                "NotReadyForSynchronization",
+                "ReadyForSynchronization",
+                "Synchronized"
+            ],
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityErpSyncDateTime": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityGmRevenue1": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityGmRevenue2": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityGmRevenue3": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityGmRevenue4": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityGmRevenue5": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityGmRevenue6": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityGmRevenue7": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityGmRevenue8": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityGmRevenue9": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityGmRevenue10": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityGmRevenue11": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityGmRevenue12": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityHistory": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityId": {
+            "format": "int32",
+            "type": "integer"
+        },
+        "OpportunityLevel": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OpportunityLevelText": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityLost1": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityLost2": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityLost3": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityLostDate": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityNextFollowUp": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityNote": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityNumber": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityOrderDate": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityOrderGmValue": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityOrderValue": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityOrganisationId": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OpportunityPercent": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OpportunityPersonId": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OpportunityProduct": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityProductId": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OpportunityQuotationLanguageId": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OpportunityRevenue1": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityRevenue2": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityRevenue3": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityRevenue4": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityRevenue5": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityRevenue6": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityRevenue7": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityRevenue8": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityRevenue9": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityRevenue10": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityRevenue11": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunityRevenue12": {
+            "format": "double",
+            "type": "number"
+        },
+        "OpportunitySearch1": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunitySearch2": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunitySpentTime": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityUpdatedAt": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityUpdatedBy": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityUserGroupId": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OpportunityWinPercent": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OpportunityWinPercent2": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OpportunityWinYesNo": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "OpportunityPlus1": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityPlus2": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityPlus3": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityPlus4": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityPlus5": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityPlus6": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityPlus7": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityPlus8": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityPlus9": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityPlus10": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityPlus11": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityPlus12": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityPlus13": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityPlus14": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityPlus15": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityPlus16": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityPlus17": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityPlus18": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityPlus19": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityPlus20": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityCustom1": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityCustom2": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityCustom3": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityCustom4": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityCustom5": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityCustom6": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityCustom7": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityCustom8": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityCustom9": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityCustom10": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityCustom11": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityCustom12": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityCustom13": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityCustom14": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityCustom15": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityMemo": {
+            "type": [
+                "null",
+                "string"
+            ]
+        }
+    }
+}

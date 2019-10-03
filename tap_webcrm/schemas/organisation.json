@@ -1,0 +1,723 @@
+{
+    "required": [
+        "OrganisationId"
+    ],
+    "type": "object",
+    "properties": {
+        "OrganisationAddress": {
+            "maxLength": 250,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationAlert": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationApprovalStatus": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OrganisationCity": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationComment": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationCompareName": {
+            "maxLength": 500,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationCountry": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationCreatedAt": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationCreatedBy": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationDivisionName": {
+            "maxLength": 200,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationDomain": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationExtraCustom1": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationExtraCustom2": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationExtraCustom3": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationExtraCustom4": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationExtraCustom5": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationExtraCustom6": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationExtraCustom7": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationExtraCustom8": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationFax": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationGps": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationId": {
+            "format": "int32",
+            "type": "integer"
+        },
+        "OrganisationImageFileExtension": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationIndustry": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationLastDisplayedAt": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationLastItemType": {
+            "enum": [
+                "Undefined",
+                "Activity",
+                "Opportunity",
+                "Delivery",
+                "Meeting",
+                "SupportCase"
+            ],
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationLastItemUpdatedAt": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationMarketDataId": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationMarketDataProviderId": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OrganisationName": {
+            "maxLength": 200,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationNoAds": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "OrganisationHistory": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationOutlookSync": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OrganisationOverlayUrl": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationOwner": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OrganisationOwner2": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OrganisationPostCode": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationReportTemp": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OrganisationSla": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OrganisationState": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationStatus": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationTelephone": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationTelephoneSearch": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationTerritoryId": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OrganisationType": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationUpdatedAt": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationUpdatedBy": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationVatCountry": {
+            "maxLength": 10,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationVatGroup": {
+            "maxLength": 20,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationVatNumber": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationVatStatus": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationVatVerifiedAt": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationWww": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationXDate1": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationXDate2": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationXInt1": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OrganisationXInt2": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OrganisationXInt3": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OrganisationXInt4": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OrganisationXInt5": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OrganisationXInt6": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OrganisationXInt7": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OrganisationXInt8": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "OrganisationXMemo1": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationXMemo2": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationXText1": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationXText2": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationXText3": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationXText4": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationXText5": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationXText6": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationXText7": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationXText8": {
+            "maxLength": 50,
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationPlus1": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationPlus2": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationPlus3": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationPlus4": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationPlus5": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationPlus6": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationPlus7": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationPlus8": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationPlus9": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationPlus10": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationPlus11": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationPlus12": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationPlus13": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationPlus14": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationPlus15": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationPlus16": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationPlus17": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationPlus18": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationPlus19": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationPlus20": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationCustom1": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationCustom2": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationCustom3": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationCustom4": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationCustom5": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationCustom6": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationCustom7": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationCustom8": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationCustom9": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationCustom10": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationCustom11": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationCustom12": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationCustom13": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationCustom14": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationCustom15": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OrganisationMemo": {
+            "type": [
+                "null",
+                "string"
+            ]
+        }
+    }
+}

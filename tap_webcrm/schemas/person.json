@@ -1,0 +1,581 @@
+{
+    "required": [
+        "PersonId"
+    ],
+    "type": "object",
+    "properties": {
+        "PersonBirthday": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonBlockMassEmail": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "PersonBlockMassEmail2": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "PersonCampaignPassword": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonCampaignWrongPasswordCount": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "PersonCheckMark1": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "PersonCheckMark2": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "PersonCheckMark3": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "PersonCheckMark4": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "PersonCheckMark5": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "PersonCheckMark6": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "PersonCheckMark7": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "PersonCheckMark8": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "PersonCheckMark9": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "PersonCheckMark10": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "PersonComment": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonCreatedAt": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonCreatedBy": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonDirectPhone": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonEmail": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonEmail2": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonEmailBounces": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "PersonEmail2Bounces": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "PersonFirstName": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonId": {
+            "format": "int32",
+            "type": "integer"
+        },
+        "PersonImageFileExtension": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonLastLoginDateTime": {
+            "format": "date-time",
+            "description": "This property is obsolete and will be removed in the future. ",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonLastName": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonLoginLog": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonMarketDateId": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonMemberGroupId": {
+            "format": "int32",
+            "description": "This property is obsolete and will be removed in the future. ",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "PersonMemberLanguageId": {
+            "format": "int32",
+            "description": "This property is obsolete and will be removed in the future. ",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "PersonMemberNumber": {
+            "description": "This property is obsolete and will be removed in the future. ",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonMemberPassword": {
+            "description": "This property is obsolete and will be removed in the future. ",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonMemberStartDate": {
+            "format": "date-time",
+            "description": "This property is obsolete and will be removed in the future. ",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonMemberStatusId": {
+            "format": "int32",
+            "description": "This property is obsolete and will be removed in the future. ",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "PersonMemberWrongPasswordCount": {
+            "format": "int32",
+            "description": "This property is obsolete and will be removed in the future. ",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "PersonMiddleName": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonMobilePhone": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonName": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonHistory": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonOrganisationId": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "PersonPassword": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonSalutation": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonSkype": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonSortOrder": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "PersonStatus": {
+            "enum": [
+                "Active",
+                "Resigned",
+                "Other",
+                "Guest"
+            ],
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonSupportLanguageId": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "PersonTelephoneSearch": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonTitle": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonUpdatedAt": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonUpdatedBy": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonPlus1": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "PersonPlus2": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "PersonPlus3": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "PersonPlus4": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "PersonPlus5": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "PersonPlus6": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "PersonPlus7": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "PersonPlus8": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "PersonPlus9": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "PersonPlus10": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "PersonPlus11": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "PersonPlus12": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "PersonPlus13": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "PersonPlus14": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "PersonPlus15": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "PersonPlus16": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "PersonPlus17": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "PersonPlus18": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "PersonPlus19": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "PersonPlus20": {
+            "type": [
+                "null",
+                "string",
+                "number"
+            ]
+        },
+        "PersonCustom1": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonCustom2": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonCustom3": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonCustom4": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonCustom5": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonCustom6": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonCustom7": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonCustom8": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonCustom9": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonCustom10": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonCustom11": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonCustom12": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonCustom13": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonCustom14": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonCustom15": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "PersonMemo": {
+            "type": [
+                "null",
+                "string"
+            ]
+        }
+    }
+}
