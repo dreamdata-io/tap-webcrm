@@ -1,0 +1,889 @@
+{
+    "required": [
+        "DeliveryId"
+    ],
+    "type": "object",
+    "properties": {
+        "DeliveryAssignedTo": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "DeliveryAssignedTo2": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "DeliveryComment": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryCreatedAt": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryCreatedBy": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryCurrencyName": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryDescription": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryDiscount": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryErpId": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryErpReadOnly": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryErpStatus": {
+            "enum": [
+                "NotReadyForSynchronization",
+                "ReadyForSynchronization",
+                "Synchronized"
+            ],
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryErpSyncDateTime": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryGmRevenue1": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryGmRevenue2": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryGmRevenue3": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryGmRevenue4": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryGmRevenue5": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryGmRevenue6": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryGmRevenue7": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryGmRevenue8": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryGmRevenue9": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryGmRevenue10": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryGmRevenue11": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryGmRevenue12": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryHistory": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryId": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "DeliveryNextFollowUp": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryNote": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryNumber": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityCustom1": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityCustom2": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityCustom3": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityCustom4": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityCustom5": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityCustom6": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityCustom7": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityCustom8": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityCustom9": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityCustom10": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityCustom11": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityCustom12": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityCustom13": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityCustom14": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityCustom15": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityMemo": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityPlus1": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityPlus2": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityPlus3": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityPlus4": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityPlus5": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityPlus6": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityPlus7": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityPlus8": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityPlus9": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityPlus10": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityPlus11": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityPlus12": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityPlus13": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityPlus14": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityPlus15": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityPlus16": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityPlus17": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityPlus18": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityPlus19": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOpportunityPlus20": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOrderDate": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryOrderGmValue": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryOrderValue": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryOrganisationId": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "DeliveryPercent": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "DeliveryPersonId": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "DeliveryProduct": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryProductId": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "DeliveryQuotationLanguageId": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "DeliveryResponsible": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "DeliveryRevenue1": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryRevenue2": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryRevenue3": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryRevenue4": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryRevenue5": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryRevenue6": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryRevenue7": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryRevenue8": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryRevenue9": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryRevenue10": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryRevenue11": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryRevenue12": {
+            "format": "double",
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "DeliveryRisk": {
+            "enum": [
+                "NoRisk",
+                "Small",
+                "Medium",
+                "High",
+                "Crises"
+            ],
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliverySearch1": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliverySearch2": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliverySpentTime": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryStatus": {
+            "enum": [
+                "New",
+                "Planned",
+                "OnGoing",
+                "Completed",
+                "GeneralDelivery"
+            ],
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryType": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "DeliveryUpdatedAt": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryUpdatedBy": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryUserGroupId": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "DeliveryWinPercent": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "DeliveryWinPercent2": {
+            "format": "int32",
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "DeliveryWinYesNo": {
+            "type": [
+                "null",
+                "boolean"
+            ]
+        },
+        "DeliveryWonDate": {
+            "format": "date-time",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryPlus1": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryPlus2": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryPlus3": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryPlus4": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryPlus5": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryPlus6": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryPlus7": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryPlus8": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryPlus9": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryPlus10": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryPlus11": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryPlus12": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryPlus13": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryPlus14": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryPlus15": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryPlus16": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryPlus17": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryPlus18": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryPlus19": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryPlus20": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryCustom1": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryCustom2": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryCustom3": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryCustom4": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryCustom5": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryCustom6": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryCustom7": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryCustom8": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryCustom9": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryCustom10": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryCustom11": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryCustom12": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryCustom13": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryCustom14": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryCustom15": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "DeliveryMemo": {
+            "type": [
+                "null",
+                "string"
+            ]
+        }
+    }
+}

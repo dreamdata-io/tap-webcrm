@@ -1,12 +1,22 @@
 # tap-webcrm
 
+# how to execute
+
+run the following command in the root of the folder:
+
+```bash
+pipenv install . && pipenv run tap-webcrm -c config.json > opp.ndjson
+```
+
+below is an example of a valid `config.json` for this tap.
+
 # config
 
-Example of a config:
+the API_TOKEN can be provided as the environment variables `WEBCRM_API_TOKEN` or directly in the configuration as seen below:
 
 ```json
 {
-  "api_token": "<api_token>",
+  "api_token": "<API_TOKEN>",
   "streams": {
     "opportunity": {
       "exclude_fields": [
