@@ -884,6 +884,36 @@
                 "null",
                 "string"
             ]
+        },
+        "OpportunityLevel": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "OpportunityLevelText": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityNumber": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "OpportunityPersonId": {
+            "type": [
+                "null",
+                "number"
+            ]
+        },
+        "OpportunityCurrencyName": {
+            "type": [
+                "null",
+                "string"
+            ]
         }
     }
 }
