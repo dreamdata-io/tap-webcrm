@@ -45,6 +45,9 @@ class WebCRM:
             "opportunity", "OpportunityUpdatedAt", checkpoint=checkpoint
         )
 
+    def query_delivery(self, checkpoint=None):
+        yield from self.__query("delivery", "DeliveryUpdatedAt", checkpoint=checkpoint)
+
     def query_person(self, checkpoint=None):
         yield from self.__query("person", "PersonUpdatedAt", checkpoint=checkpoint)
 
