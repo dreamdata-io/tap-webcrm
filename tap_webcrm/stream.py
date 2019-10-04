@@ -38,6 +38,12 @@ def process_streams(client, streams, state):
                 "RowNumber",
             ],
         },
+        "delivery": {
+            "bookmark_property": "DeliveryUpdatedAt",
+            "generator": client.query_delivery,
+            "key_properties": ["DeliveryId"],
+            "exclude_fields": ["op_multiTerritory", "op_lastUpdatedById", "RowNumber"],
+        },
     }
 
     if not streams:
