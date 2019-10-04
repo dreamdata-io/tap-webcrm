@@ -21,6 +21,7 @@ setup(
             "schemas/opportunity.json",
             "schemas/organisation.json",
             "schemas/person.json",
+            "schemas/delivery.json",
         ]
     },
     packages=["tap_webcrm"],
