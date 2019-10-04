@@ -85,51 +85,87 @@
         },
         "OpportunityGmRevenue1": {
             "format": "double",
-            "type": "number"
+            "type": [
+                "null",
+                "number"
+            ]
         },
         "OpportunityGmRevenue2": {
             "format": "double",
-            "type": "number"
+            "type": [
+                "null",
+                "number"
+            ]
         },
         "OpportunityGmRevenue3": {
             "format": "double",
-            "type": "number"
+            "type": [
+                "null",
+                "number"
+            ]
         },
         "OpportunityGmRevenue4": {
             "format": "double",
-            "type": "number"
+            "type": [
+                "null",
+                "number"
+            ]
         },
         "OpportunityGmRevenue5": {
             "format": "double",
-            "type": "number"
+            "type": [
+                "null",
+                "number"
+            ]
         },
         "OpportunityGmRevenue6": {
             "format": "double",
-            "type": "number"
+            "type": [
+                "null",
+                "number"
+            ]
         },
         "OpportunityGmRevenue7": {
             "format": "double",
-            "type": "number"
+            "type": [
+                "null",
+                "number"
+            ]
         },
         "OpportunityGmRevenue8": {
             "format": "double",
-            "type": "number"
+            "type": [
+                "null",
+                "number"
+            ]
         },
         "OpportunityGmRevenue9": {
             "format": "double",
-            "type": "number"
+            "type": [
+                "null",
+                "number"
+            ]
         },
         "OpportunityGmRevenue10": {
             "format": "double",
-            "type": "number"
+            "type": [
+                "null",
+                "number"
+            ]
         },
         "OpportunityGmRevenue11": {
             "format": "double",
-            "type": "number"
+            "type": [
+                "null",
+                "number"
+            ]
         },
         "OpportunityGmRevenue12": {
             "format": "double",
-            "type": "number"
+            "type": [
+                "null",
+                "number"
+            ]
         },
         "OpportunityHistory": {
             "type": [
