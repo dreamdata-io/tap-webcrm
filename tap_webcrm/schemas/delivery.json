@@ -886,9 +886,10 @@
             ]
         },
         "OpportunityLevel": {
+            "format": "int32",
             "type": [
                 "null",
-                "number"
+                "integer"
             ]
         },
         "OpportunityLevelText": {
@@ -904,9 +905,10 @@
             ]
         },
         "OpportunityPersonId": {
+            "format": "int32",
             "type": [
                 "null",
-                "number"
+                "integer"
             ]
         },
         "OpportunityCurrencyName": {
