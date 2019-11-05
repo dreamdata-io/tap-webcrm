@@ -129,6 +129,7 @@ def emit_stream(
                     continue
                 
                 if include_prefix:
+                    # make sure that we cache this after it is constructed
                     if not filtered_fields:
                         filtered_fields = [field for field in record.keys() if field.startswith(include_prefix)]
                     
