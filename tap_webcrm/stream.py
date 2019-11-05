@@ -17,7 +17,7 @@ def process_streams(client, streams, state):
             "bookmark_property": "OpportunityUpdatedAt",
             "generator": client.query_opportunity,
             "key_properties": ["OpportunityId"],
-            "include_prefix": "Oppoertunity"
+            "include_prefix": "Opportunity"
         },
         "organisation": {
             "bookmark_property": "OrganisationUpdatedAt",
