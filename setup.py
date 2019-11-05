@@ -17,11 +17,8 @@ setup(
     include_package_data=True,
     package_data={
         "tap_webcrm": [
-            "swagger/swagger.json",
-            "schemas/opportunity.json",
-            "schemas/organisation.json",
-            "schemas/person.json",
-            "schemas/delivery.json",
+            "swagger/*",
+            "schemas/*",
         ]
     },
     packages=["tap_webcrm"],
