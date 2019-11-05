@@ -260,28 +260,10 @@
         "string"
       ]
     },
-    "a_snoozedAt": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "a_dismissed": {
-      "type": [
-        "null",
-        "boolean"
-      ]
-    },
     "ActivityType": {
       "type": [
         "null",
         "string"
-      ]
-    },
-    "RowNumber": {
-      "type": [
-        "null",
-        "integer"
       ]
     }
   }
