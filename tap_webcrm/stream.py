@@ -118,7 +118,6 @@ def emit_stream(
 
     i = 0
     try:
-        include_prefix_fields = None
         with singer.metrics.record_counter(stream_name) as counter:
             for record in stream_generator():
                 # retrieve updatedAt field for each record
