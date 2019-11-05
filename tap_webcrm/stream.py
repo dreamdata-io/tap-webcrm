@@ -17,38 +17,31 @@ def process_streams(client, streams, state):
             "bookmark_property": "OpportunityUpdatedAt",
             "generator": client.query_opportunity,
             "key_properties": ["OpportunityId"],
-            "exclude_fields": ["op_multiTerritory", "op_lastUpdatedById", "RowNumber"],
+            "include_prefix": "Oppoertunity"
         },
         "organisation": {
             "bookmark_property": "OrganisationUpdatedAt",
             "generator": client.query_organisation,
             "key_properties": ["OrganisationId"],
-            "exclude_fields": ["o_lastUpdatedById", "RowNumber"],
+            "include_prefix": "Organisation"
         },
         "person": {
             "bookmark_property": "PersonUpdatedAt",
             "generator": client.query_person,
             "key_properties": ["PersonId"],
-            "exclude_fields": [
-                "p_lastUpdatedById",
-                "p_reportFilterMatch",
-                "p_marketDataProviderId",
-                "p_lastLogin",
-                "p_memDate",
-                "RowNumber",
-            ],
+            "include_prefix": "Person"
         },
         "delivery": {
             "bookmark_property": "DeliveryUpdatedAt",
             "generator": client.query_delivery,
             "key_properties": ["DeliveryId"],
-            "exclude_fields": ["op_multiTerritory", "op_lastUpdatedById", "RowNumber"],
+            "include_prefix": "Delivery"
         },
         "activity": {
             "bookmark_property": "ActivityUpdatedAt",
             "generator": client.query_activity,
             "key_properties": ["ActivityId"],
-            "exclude_fields": ["a_snoozedAt", "a_dismissed", "RowNumber"],
+            "include_prefix": "Activity"
         },
     }
 
@@ -67,9 +60,10 @@ def process_streams(client, streams, state):
         bookmark_property = stream_config["bookmark_property"]
         generator = stream_config["generator"]
         key_properties = stream_config["key_properties"]
-        exclude_fields = stream_config.get("exclude_fields") + stream_custom.get(
+        exclude_fields = stream_custom.get(
             "exclude_fields", []
         )
+        include_prefix = stream_config.get("include_prefix")
         sample_size = stream_custom.get("sample_size")
 
         logger.info(f"[{stream_name}] streaming..")
@@ -84,6 +78,7 @@ def process_streams(client, streams, state):
             bookmark_property,
             key_properties,
             checkpoint,
+            include_prefix=include_prefix,
             exclude_fields=exclude_fields,
             sample_size=sample_size,
         )
@@ -104,6 +99,7 @@ def emit_stream(
     key_properties,
     checkpoint,
     exclude_fields=None,
+    include_prefix=None,
     sample_size=None,
 ):
     # load schema from disk
@@ -122,6 +118,7 @@ def emit_stream(
 
     i = 0
     try:
+        filtered_fields = None
         with singer.metrics.record_counter(stream_name) as counter:
             for record in stream_generator():
                 # retrieve updatedAt field for each record
@@ -130,8 +127,14 @@ def emit_stream(
                 # skip records if there was a previous checkpoint
                 if checkpoint and checkpoint >= updated_time:
                     continue
+                
+                if include_prefix:
+                    if not filtered_fields:
+                        filtered_fields = [field for field in record.keys() if field.startswith(include_prefix)]
+                    
+                    for field in filtered_fields:
+                        record.pop(field, None)
 
-                # remove fields that are in the exclude_fields argument
                 if exclude_fields:
                     for field in exclude_fields:
                         record.pop(field, None)
