@@ -44,6 +44,12 @@ def process_streams(client, streams, state):
             "key_properties": ["DeliveryId"],
             "exclude_fields": ["op_multiTerritory", "op_lastUpdatedById", "RowNumber"],
         },
+        "activity": {
+            "bookmark_property": "ActivityUpdatedAt",
+            "generator": client.query_activity,
+            "key_properties": ["ActivityId"],
+            "exclude_fields": ["a_snoozedAt", "a_dismissed", "RowNumber"],
+        },
     }
 
     if not streams:
