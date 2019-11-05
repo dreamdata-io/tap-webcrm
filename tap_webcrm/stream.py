@@ -118,7 +118,7 @@ def emit_stream(
 
     i = 0
     try:
-        filtered_fields = None
+        include_prefix_fields = None
         with singer.metrics.record_counter(stream_name) as counter:
             for record in stream_generator():
                 # retrieve updatedAt field for each record
@@ -130,11 +130,14 @@ def emit_stream(
                 
                 if include_prefix:
                     # make sure that we cache this after it is constructed
-                    if not filtered_fields:
-                        filtered_fields = [field for field in record.keys() if field.startswith(include_prefix)]
+                    if not include_prefix_fields:
+                        include_prefix_fields = {field for field in record.keys() if field.startswith(include_prefix)}
+                        logger.info(include_prefix_fields)
                     
-                    for field in filtered_fields:
-                        record.pop(field, None)
+                    record_fields = list(record.keys())
+                    for field in record_fields:
+                        if field not in include_prefix_fields:
+                            record.pop(field, None)
 
                 if exclude_fields:
                     for field in exclude_fields:
