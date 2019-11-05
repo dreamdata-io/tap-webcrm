@@ -1,0 +1,270 @@
+{
+  "required": [
+    "ActivityId",
+    "ActivityUpdatedAt"
+  ],
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "ActivityId": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "ActivityOrganisationId": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "ActivityAssignedTo": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "ActivityOpportunityId": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "ActivityAutoCompleteMode": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityCreatedAt": {
+      "format": "date-time",
+
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityCreatedBy": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityUpdatedAt": {
+      "format": "date-time",
+
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityUpdatedBy": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityDescription": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityAction": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityDateTime": {
+      "format": "date-time",
+
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityProduct": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityStatus": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityPersonId": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "ActivityCustom1": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityCustom2": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityCustom3": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityCustom4": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityCustom5": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityCustom6": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityCustom7": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityCustom8": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "a_history": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityMemo": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityOutlookSync": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "ActivityComment": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityCustom9": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityCustom10": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityCustom11": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityCustom12": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityCustom13": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityCustom14": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityCustom15": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityEventId": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "ActivityCampaignId": {
+      "type": [
+        "null",
+        "integer"
+      ]
+    },
+    "ActivityCampaignResult": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityCampaignDate": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityNote": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityClientName": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityClientTelephone": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityType": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  }
+}
