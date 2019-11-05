@@ -130,13 +130,9 @@ def emit_stream(
                 
                 if include_prefix:
                     # make sure that we cache this after it is constructed
-                    if not include_prefix_fields:
-                        include_prefix_fields = {field for field in record.keys() if field.startswith(include_prefix)}
-                        logger.info(include_prefix_fields)
-                    
                     record_fields = list(record.keys())
                     for field in record_fields:
-                        if field not in include_prefix_fields:
+                        if not field.startswith(include_prefix):
                             record.pop(field, None)
 
                 if exclude_fields:
