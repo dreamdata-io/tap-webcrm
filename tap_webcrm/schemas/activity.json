@@ -263,6 +263,12 @@
         "string"
       ]
     },
+    "ActivityPlus1": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "ActivityPlus2": {
       "type": [
         "null",
