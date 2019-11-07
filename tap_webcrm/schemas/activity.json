@@ -262,6 +262,90 @@
         "null",
         "string"
       ]
+    },
+    "ActivityPlus2": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityPlus3": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityPlus4": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityPlus5": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityPlus6": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityPlus7": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityPlus8": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityPlus9": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityPlus10": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityPlus11": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityPlus12": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityPlus13": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityPlus14": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityPlus15": {
+      "type": [
+        "null",
+        "string"
+      ]
     }
   }
 }
