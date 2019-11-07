@@ -40,7 +40,6 @@
     },
     "ActivityCreatedAt": {
       "format": "date-time",
-
       "type": [
         "null",
         "string"
@@ -54,7 +53,6 @@
     },
     "ActivityUpdatedAt": {
       "format": "date-time",
-
       "type": [
         "null",
         "string"
@@ -80,7 +78,6 @@
     },
     "ActivityDateTime": {
       "format": "date-time",
-
       "type": [
         "null",
         "string"
