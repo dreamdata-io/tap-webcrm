@@ -346,6 +346,36 @@
         "null",
         "string"
       ]
+    },
+    "ActivityPlus16": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityPlus17": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityPlus18": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityPlus19": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ActivityPlus20": {
+      "type": [
+        "null",
+        "string"
+      ]
     }
   }
 }
