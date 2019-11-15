@@ -916,6 +916,12 @@
                 "null",
                 "string"
             ]
+        },
+        "DeliveryOpportunityCurrencyName": {
+            "type": [
+                "null",
+                "string"
+            ]
         }
     }
 }
