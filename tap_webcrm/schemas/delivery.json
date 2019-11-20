@@ -922,6 +922,12 @@
                 "null",
                 "string"
             ]
+        },
+        "DeliveryOpportunityCurrencySymbol": {
+            "type": [
+                "null",
+                "string"
+            ]
         }
     }
 }
