@@ -928,6 +928,12 @@
                 "null",
                 "string"
             ]
+        },
+        "DeliveryCurrencySymbol": {
+            "type": [
+                "null",
+                "string"
+            ]
         }
     }
 }
