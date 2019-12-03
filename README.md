@@ -10,6 +10,10 @@ pipenv install . && pipenv run tap-webcrm -c config.json > opp.ndjson
 
 below is an example of a valid `config.json` for this tap.
 
+# Note
+
+As of right now, the tap does not support `--discovery` or the `--catalog` argument. This was build in a rush before completely understanding those concepts. They are on the roadmap however, but right now, what would normally be achieved through the `--catalog` argument, ie. filtering fields etc. is achieved in the `--config` argument in the `streams` field. See the below example of how to exclude fields for instance.
+
 # config
 
 the API_TOKEN can be provided as the environment variables `WEBCRM_API_TOKEN` or directly in the configuration as seen below:
