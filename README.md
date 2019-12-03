@@ -1,11 +1,11 @@
 # tap-webcrm
 
-# how to execute
+# installation
 
-run the following command in the root of the folder:
+install via `pip` using the following command:
 
 ```bash
-pipenv install . && pipenv run tap-webcrm -c config.json > opp.ndjson
+pip install tap-webcrm
 ```
 
 below is an example of a valid `config.json` for this tap.
