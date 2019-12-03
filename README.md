@@ -12,7 +12,13 @@ below is an example of a valid `config.json` for this tap.
 
 # Note
 
+### singer.io compliance
+
 As of right now, the tap does not support `--discovery` or the `--catalog` argument. This was build in a rush before completely understanding those concepts. They are on the roadmap however, but right now, what would normally be achieved through the `--catalog` argument, ie. filtering fields etc. is achieved in the `--config` argument in the `streams` field. See the below example of how to exclude fields for instance.
+
+### Tables supported
+
+As of right now, Dreamdata only has use for the `Opportunity`, `Organisation` and `Person` tables - but it would be trivial to add support for other ones and PRs are welcome.
 
 # config
 
