@@ -1,14 +1,21 @@
 #!/usr/bin/env python
-
+import os
 from setuptools import setup
 
 version = "0.0.2"
 url = "https://github.com/dreamdata-io/tap-webcrm"
 
+
+this_directory = os.path.abspath(os.path.dirname(__file__))
+with open(os.path.join(this_directory, "README.md"), encoding="utf-8") as f:
+    long_description = f.read()
+
 setup(
     name="tap-webcrm",
     version=version,
     description="Singer.io tap for extracting data from WebCRM",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     author="Dreamdata",
     url=url,
     download_url=f"{url}/archive/v{version}.tar.gz",
