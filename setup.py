@@ -2,7 +2,7 @@
 import os
 from setuptools import setup
 
-version = "0.0.2"
+version = os.environ.get("PACKAGE_VERSION") or os.environ.get("CIRCLE_TAG")
 url = "https://github.com/dreamdata-io/tap-webcrm"
 
 
