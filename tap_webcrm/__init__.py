@@ -6,7 +6,8 @@ import singer
 from singer import utils
 
 from tap_webcrm.client import WebCRM
-from tap_webcrm.stream import discover, process_streams
+import tap_webcrm.stream as stream
+import tap_webcrm.discover as discover
 
 
 logger = singer.get_logger()
@@ -27,11 +28,10 @@ def main():
     state = args.state
 
     if args.discover:
-        streams = discover(streams.keys())
-        print(json.dumps(streams, sort_keys=True, indent="  "))
+        discover.do_discover()
         return
 
-    process_streams(webcrm_client, streams, state)
+    stream.process_streams(webcrm_client, streams, state)
 
 
 if __name__ == "__main__":
