@@ -6,7 +6,7 @@ import sys
 from typing import Dict, Any, List
 
 import singer
-from singer import utils, metadata
+from singer import utils, metadata, Transformer
 from singer.catalog import Catalog
 
 logger = singer.get_logger()
@@ -31,14 +31,19 @@ def process_stream(client, stream, state: dict, start_date):
 
     generator = getattr(client, generator_attr)
 
-    new_checkpoint = emit_stream(
-        stream,
-        generator,
-        bookmark_property,
-        key_properties,
-        checkpoint,
-        include_prefix=include_prefix,
-    )
+    # transformer takes the selected fields from the catalog and filters each record
+    # using the metadata for each stream
+    with Transformer() as transformer:
+        new_checkpoint = emit_stream(
+            stream,
+            generator,
+            bookmark_property,
+            key_properties,
+            checkpoint,
+            transformer,
+            mdata,
+            include_prefix=include_prefix,
+        )
 
     singer.write_bookmark(state, stream_name, bookmark_property, new_checkpoint)
 
@@ -55,6 +60,8 @@ def emit_stream(
     bookmark_property,
     key_properties,
     checkpoint,
+    transformer,
+    mdata,
     exclude_fields=None,
     include_prefix=None,
 ):
@@ -84,19 +91,12 @@ def emit_stream(
                 if checkpoint and checkpoint >= updated_time:
                     continue
 
-                if include_prefix:
-                    # make sure that we cache this after it is constructed
-                    record_fields = list(record.keys())
-                    for field in record_fields:
-                        if not field.startswith(include_prefix):
-                            record.pop(field, None)
-
-                if exclude_fields:
-                    for field in exclude_fields:
-                        record.pop(field, None)
+                dict_record = transformer.transform(record, schema, mdata)
 
                 # write record with extracted timestamp
-                singer.write_record(stream_name, record, time_extracted=utils.now())
+                singer.write_record(
+                    stream_name, dict_record, time_extracted=utils.now()
+                )
 
                 # keep track of the most recent record
                 if most_recent_update < updated_time:
