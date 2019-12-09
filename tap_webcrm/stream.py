@@ -57,7 +57,6 @@ def emit_stream(
     checkpoint,
     exclude_fields=None,
     include_prefix=None,
-    sample_size=None,
 ):
     # load schema from disk
     schema = stream.schema.to_dict()
@@ -75,7 +74,6 @@ def emit_stream(
     # new record will be newer than that
     most_recent_update = "0001-01-01T00:00:00+00:00"
 
-    i = 0
     try:
         with singer.metrics.record_counter(stream_name) as counter:
             for record in stream_generator():
@@ -104,13 +102,7 @@ def emit_stream(
                 if most_recent_update < updated_time:
                     most_recent_update = updated_time
 
-                i += 1
                 counter.increment(1)
-
-                if sample_size and sample_size < i:
-                    break
-
-                # instrument with metrics to allow targets to receive progress
         return most_recent_update
 
     # because the documents are orderes by createdAt time
