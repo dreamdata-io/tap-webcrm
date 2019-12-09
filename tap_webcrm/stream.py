@@ -2,6 +2,7 @@ import os
 import pkg_resources
 import json
 import sys
+import traceback
 
 from typing import Dict, Any, List
 
@@ -112,5 +113,5 @@ def emit_stream(
     # records that have not been processed contain an UpdatedTime that is older
     # than the
     except Exception as err:
-        logger.error(f"{str(err)}")
+        logger.error(traceback.format_exc())
         return checkpoint_backup
