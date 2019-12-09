@@ -7,7 +7,7 @@ from singer import utils
 
 from tap_webcrm.client import WebCRM
 import tap_webcrm.stream as stream
-import tap_webcrm.discover as discover
+from tap_webcrm.discover import discover, do_discover
 
 
 logger = singer.get_logger()
@@ -28,10 +28,21 @@ def main():
     state = args.state
 
     if args.discover:
-        discover.do_discover()
+        do_discover()
         return
 
-    stream.process_streams(webcrm_client, streams, state)
+    catalog = args.catalog
+    state = args.state
+    start_date = args.config.get("start_date")
+
+    if not catalog:
+        catalog = discover()
+        selected_streams = catalog.streams
+    else:
+        selected_streams = catalog.get_selected_streams(state)
+
+    for selected_stream in selected_streams:
+        stream.process_stream(webcrm_client, selected_stream, state, start_date)
 
 
 if __name__ == "__main__":

@@ -6,94 +6,51 @@ import sys
 from typing import Dict, Any, List
 
 import singer
-from singer import utils
+from singer import utils, metadata
+from singer.catalog import Catalog
 
 logger = singer.get_logger()
 
 
-def process_streams(client, streams, state):
-    implemented_streams = {
-        "opportunity": {
-            "bookmark_property": "OpportunityUpdatedAt",
-            "generator": client.query_opportunity,
-            "key_properties": ["OpportunityId"],
-            "include_prefix": "Opportunity"
-        },
-        "organisation": {
-            "bookmark_property": "OrganisationUpdatedAt",
-            "generator": client.query_organisation,
-            "key_properties": ["OrganisationId"],
-            "include_prefix": "Organisation"
-        },
-        "person": {
-            "bookmark_property": "PersonUpdatedAt",
-            "generator": client.query_person,
-            "key_properties": ["PersonId"],
-            "include_prefix": "Person"
-        },
-        "delivery": {
-            "bookmark_property": "DeliveryUpdatedAt",
-            "generator": client.query_delivery,
-            "key_properties": ["DeliveryId"],
-            "include_prefix": "Delivery"
-        },
-        "activity": {
-            "bookmark_property": "ActivityUpdatedAt",
-            "generator": client.query_activity,
-            "key_properties": ["ActivityId"],
-            "include_prefix": "Activity"
-        },
-    }
+def process_stream(client, stream, state: dict, start_date):
+    # mdata = metadata.to_map(stream.metadata).get((), {})
+    mdata = metadata.to_map(stream.metadata)
 
-    if not streams:
-        streams = implemented_streams
-    else:
-        for stream_name in streams:
-            if stream_name not in implemented_streams:
-                raise ValueError(
-                    f"'streams.{stream_name}' is not in list of valid streams: {implemented_streams.keys()}"
-                )
+    bookmark_property = metadata.get(mdata, (), "bookmark_property")
+    generator_attr = metadata.get(mdata, (), "generator_attr")
+    include_prefix = metadata.get(mdata, (), "include_prefix")
 
-    for stream_name, stream_custom in streams.items():
-        stream_config = implemented_streams[stream_name]
+    key_properties = stream.key_properties
+    stream_name = stream.tap_stream_id
 
-        bookmark_property = stream_config["bookmark_property"]
-        generator = stream_config["generator"]
-        key_properties = stream_config["key_properties"]
-        exclude_fields = stream_custom.get(
-            "exclude_fields", []
-        )
-        include_prefix = stream_config.get("include_prefix")
-        sample_size = stream_custom.get("sample_size")
+    logger.info(f"[{stream_name}] streaming..")
 
-        logger.info(f"[{stream_name}] streaming..")
+    checkpoint = singer.get_bookmark(state, stream_name, bookmark_property)
+    if checkpoint:
+        logger.info(f"[{stream_name}] previous state: {checkpoint}")
 
-        checkpoint = singer.get_bookmark(state, stream_name, bookmark_property)
-        if checkpoint:
-            logger.info(f"[{stream_name}] previous state: {checkpoint}")
+    generator = getattr(client, generator_attr)
 
-        new_checkpoint = emit_stream(
-            stream_name,
-            generator,
-            bookmark_property,
-            key_properties,
-            checkpoint,
-            include_prefix=include_prefix,
-            exclude_fields=exclude_fields,
-            sample_size=sample_size,
-        )
+    new_checkpoint = emit_stream(
+        stream,
+        generator,
+        bookmark_property,
+        key_properties,
+        checkpoint,
+        include_prefix=include_prefix,
+    )
 
-        singer.write_bookmark(state, stream_name, bookmark_property, new_checkpoint)
+    singer.write_bookmark(state, stream_name, bookmark_property, new_checkpoint)
 
-        logger.info(f"[{stream_name}] emitting state: {state}")
+    logger.info(f"[{stream_name}] emitting state: {state}")
 
-        singer.write_state(state)
+    singer.write_state(state)
 
-        logger.info(f"[{stream_name}] done")
+    logger.info(f"[{stream_name}] done")
 
 
 def emit_stream(
-    stream_name,
+    stream,
     stream_generator,
     bookmark_property,
     key_properties,
@@ -103,7 +60,9 @@ def emit_stream(
     sample_size=None,
 ):
     # load schema from disk
-    schema = load_schema(stream_name)
+    schema = stream.schema.to_dict()
+
+    stream_name = stream.tap_stream_id
 
     # write schema
     singer.write_schema(stream_name, schema, key_properties)
@@ -126,7 +85,7 @@ def emit_stream(
                 # skip records if there was a previous checkpoint
                 if checkpoint and checkpoint >= updated_time:
                     continue
-                
+
                 if include_prefix:
                     # make sure that we cache this after it is constructed
                     record_fields = list(record.keys())
@@ -163,24 +122,3 @@ def emit_stream(
     except Exception as err:
         logger.error(f"{str(err)}")
         return checkpoint_backup
-
-
-def load_schema(stream_name):
-    filename = f"tap_webcrm/schemas/{stream_name}.json"
-    filepath = os.path.join(
-        pkg_resources.get_distribution("tap_webcrm").location, filename
-    )
-    with open(filepath, "r") as fp:
-        return json.load(fp)
-
-
-def discover(stream_names):
-    streams = [
-        {
-            "tap_stream_id": stream_name,
-            "stream": stream_name,
-            "schema": load_schema(stream_name),
-        }
-        for stream_name in stream_names
-    ]
-    return {"streams": streams}
