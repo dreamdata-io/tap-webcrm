@@ -106,7 +106,7 @@ def emit_stream(
                 counter.increment(1)
         return most_recent_update
 
-    # because the documents are orderes by createdAt time
+     # because the documents are ordered by createdAt time
     # and not updated at, we should only save the state when
     # a complete successful run was achieved.
     # If an error occured mid-run, thereit is almost guaranteed that
