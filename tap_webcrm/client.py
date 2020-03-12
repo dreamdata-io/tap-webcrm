@@ -50,9 +50,11 @@ class WebCRM:
 
     def query_person(self, checkpoint=None):
         yield from self.__query("person", "PersonUpdatedAt", checkpoint=checkpoint)
-    
+
     def query_activity(self, checkpoint=None):
-        yield from self.__query("activity", "ActivityUpdatedAt", direction="DESC", checkpoint=checkpoint)
+        yield from self.__query(
+            "activity", "ActivityUpdatedAt", direction="DESC", checkpoint=checkpoint
+        )
 
     def __query(self, table, updated_at_field, direction="ASC", checkpoint=None):
         if direction not in ["ASC", "DESC"]:
