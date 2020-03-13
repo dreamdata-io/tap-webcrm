@@ -106,12 +106,12 @@ def emit_stream(
                 counter.increment(1)
         return most_recent_update
 
-     # because the documents are ordered by createdAt time
+    # because the documents are ordered by createdAt time
     # and not updated at, we should only save the state when
     # a complete successful run was achieved.
-    # If an error occured mid-run, thereit is almost guaranteed that
+    # If an error occured mid-run, it is almost guaranteed that
     # records that have not been processed contain an UpdatedTime that is older
     # than the
-    except Exception as err:
+    except Exception:
         logger.error(traceback.format_exc())
-        return checkpoint_backup
+        raise
